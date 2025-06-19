@@ -1,0 +1,13 @@
+#!name=公众号模拟其他用户
+#!desc=通过代理接口返回对应用户信息
+#!homepage=https://github.com/marxguo/tool-config
+#!author=marxguo
+
+
+
+[Rewrite]
+^https://api\.en-plus\.cn:8080/Charge/api/app/wx/getOpenIdAndUnionId$ https://mock.apipost.net/mock/2acc12799065003/api/app/wx/getOpenIdAndUnionId?apipost_id=2162f9a rewrite
+
+
+[MITM]
+hostname = %APPEND% api.en-plus.cn:8080
